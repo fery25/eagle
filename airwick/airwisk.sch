@@ -15326,9 +15326,7 @@ Source: www.mpe-connector.de / garry_shortform_2012.pdf</description>
 <part name="K1" library="relay" deviceset="G5V-2" device=""/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
-<part name="GND4" library="supply1" deviceset="GND" device=""/>
-<part name="R2" library="resistor" deviceset="R-EU_" device="0204/7" value="220Ω"/>
-<part name="R1" library="resistor" deviceset="R-EU_" device="0204/7" value="220Ω"/>
+<part name="R1" library="resistor" deviceset="R-EU_" device="0204/7" value="47K"/>
 <part name="C2" library="rcl" deviceset="C-EU" device="025-025X050" value="100nF"/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="T1" library="transistor" deviceset="*-NPN-" device="TO92" value="2N2222A"/>
@@ -15352,8 +15350,6 @@ Source: www.mpe-connector.de / garry_shortform_2012.pdf</description>
 <instance part="K1" gate="1" x="53.34" y="76.2" rot="R270"/>
 <instance part="GND2" gate="1" x="55.88" y="30.48"/>
 <instance part="GND3" gate="1" x="33.02" y="30.48"/>
-<instance part="GND4" gate="1" x="22.86" y="30.48"/>
-<instance part="R2" gate="G$1" x="22.86" y="40.64" rot="R270"/>
 <instance part="R1" gate="G$1" x="15.24" y="58.42"/>
 <instance part="C2" gate="G$1" x="-10.16" y="66.04"/>
 <instance part="GND5" gate="1" x="-20.32" y="53.34"/>
@@ -15373,11 +15369,6 @@ Source: www.mpe-connector.de / garry_shortform_2012.pdf</description>
 </busses>
 <nets>
 <net name="GND" class="1">
-<segment>
-<pinref part="R2" gate="G$1" pin="2"/>
-<pinref part="GND4" gate="1" pin="GND"/>
-<wire x1="22.86" y1="35.56" x2="22.86" y2="33.02" width="0.1524" layer="91"/>
-</segment>
 <segment>
 <pinref part="GND5" gate="1" pin="GND"/>
 <pinref part="U$1" gate="G$1" pin="GND"/>
@@ -15427,12 +15418,8 @@ Source: www.mpe-connector.de / garry_shortform_2012.pdf</description>
 <net name="N$3" class="0">
 <segment>
 <pinref part="R1" gate="G$1" pin="2"/>
-<pinref part="R2" gate="G$1" pin="1"/>
-<wire x1="22.86" y1="58.42" x2="20.32" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="22.86" y1="45.72" x2="22.86" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="T1" gate="G$1" pin="B"/>
-<wire x1="22.86" y1="58.42" x2="27.94" y2="58.42" width="0.1524" layer="91"/>
-<junction x="22.86" y="58.42"/>
+<wire x1="20.32" y1="58.42" x2="27.94" y2="58.42" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$5" class="0">
